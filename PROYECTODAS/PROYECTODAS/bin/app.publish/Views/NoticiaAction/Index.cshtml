@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PROYECTODAS.noticia>
+
+<br>
+<center>
+    <iframe width="470" height="365"
+            src="https://www.youtube.com/embed/re1c7zajMu4">
+    </iframe>
+    <br>
+    <br>
+    <p style="font-weight: bold">Somos una institución de Educación Superior con carisma salesiano dedicada a la formación integral de la persona humana, por medio de la investigación, la ciencia, la cultura, la tecnología, la innovación y el compromiso con la comunidad para la construcción de una sociedad libre, justa y solidaria.</p>
+</center>
+
+<br>
+<h2>Noticias UDB</h2>
+<br>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.id }) |
+            @Html.ActionLink("Detalles", "Detalles", new { id=item.id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

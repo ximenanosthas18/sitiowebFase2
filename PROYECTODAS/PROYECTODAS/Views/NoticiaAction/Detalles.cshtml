@@ -1,0 +1,35 @@
+﻿@model PROYECTODAS.Models.NoticiaClass
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuerpo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cuerpo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Editar", new { id = Model.Id }) |
+    @Html.ActionLink("Regresar a Inicio", "Index")
+</p>
